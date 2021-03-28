@@ -79,7 +79,7 @@
 #define INVERT_ALARM_PIN true
 
 // Enable servo alarm feedback
-#define USE_ALARM_PIN
+// #define USE_ALARM_PIN
 
 
 
@@ -96,7 +96,9 @@
 //================================================================================
 
 // Encoder resolution (counts per revolution)
-#define ENCODER_RESOLUTION 4096
+// For some weird reason, when compared to a tachometer, we're high by about 1.024.
+// That's a bit close to 1024 to feel like a coincidence, but it's off in the wrong direction...
+#define ENCODER_RESOLUTION 4096 * 1000 / 1024
 
 // Which encoder input to use
 #define ENCODER_USE_EQEP1
